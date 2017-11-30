@@ -50,5 +50,7 @@ sess.run(init)
 for i in range(1000):
     sess.run(train, {x: [1, 2, 3, 4], y: [0, -1, -2, -3]})
 
+# print which values we got (for the weights)
 print(sess.run([W, b]))
+# print the current loss
 print(sess.run(loss, {x: [1, 2, 3, 4], y: [0, -1, -2, -3]})) # gives 23.66
